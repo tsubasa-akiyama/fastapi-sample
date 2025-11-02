@@ -7,7 +7,7 @@ on:
         - .github/workflows/deploy-pr.yml
 
 env:
- RESISTRY: ghcr.io
+ REGISTRY: ghcr.io
 
 
 jobs:
@@ -19,9 +19,9 @@ jobs:
 
         - name: Docker Meta
           id: meta
-          uses: docker/metadata-actions@v5
+          uses: docker/metadata-action@v5
           with:
-            images: ${{ env.RESISTRY }}/${{ github.actor }}/${{ github.repository }}
+            images: ${{ env.REGISTRY }}/${{ github.repository }}
 
 
         - name: Login in to Github container registry
