@@ -27,7 +27,7 @@ jobs:
         - name: Login in to Github container registry
           uses: docker/login-action@v3
           with:
-             registry: ${{ env.RESISTRY }}
+             registry: ${{ env.REGISTRY }}
              username: ${{ github.actor }}
              password: ${{ secrets.GITHUB_TOKEN }}
 
